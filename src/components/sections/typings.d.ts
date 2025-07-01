@@ -31,6 +31,23 @@ export type CombinedEducationProps = {
 };
 
 export type Artwork = {
-    artist: string
-    art: string
-}
+    artist: string;
+    art: string;
+    description?: string;
+};
+
+export type Art = {
+    artworks: Artwork[];
+    content: string;
+    title?: string;
+};
+
+export type ScrollAreaHorizontalDemoProps = {
+    items: Artwork[];
+    className?: string;
+};
+
+export type ArtArticleProps = {
+    art: Art;
+    className?: string;
+};

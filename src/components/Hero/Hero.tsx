@@ -37,7 +37,7 @@ const Hero = () => {
       </header>
       <div className="fixed bottom-6 right-6 flex flex-col space-y-3 z-50">
         <a
-          href="https://github.com/YOUR_GITHUB_USERNAME"
+          href="https://github.com/tadirova"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-white/80 hover:bg-white text-black font-semibold px-4 py-2 rounded-full shadow-lg flex items-center gap-2 transition"
@@ -46,7 +46,7 @@ const Hero = () => {
           GitHub
         </a>
         <a
-          href="/#"
+          href="/cv.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-white/80 hover:bg-white text-black font-semibold px-4 py-2 rounded-full shadow-lg flex items-center gap-2 transition"

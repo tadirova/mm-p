@@ -45,6 +45,7 @@ const Footer = () => {
     return (
         <SectionWrapperContainer>
             <div
+                id='contact'
                 className="relative flex flex-col max-h-[1000px] items-center text-center overflow-x-hidden py-20
                 px-0 sm:px-[50px] md:text-left max-w-full justify-center mx-auto overflow-y space-y-12"
             >

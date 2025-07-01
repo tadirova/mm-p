@@ -7,8 +7,8 @@ import {
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { useState } from "react";
-import { navItems } from "../../constants/constants";
 import { NavItem } from "../heroTypes";
+import {navItems} from "@/constants/constants";
 
 
 
@@ -32,7 +32,7 @@ const SheetMenu = () => {
                     ? "bg-gradient-to-br from-[#ffd700]/30 to-[#003767]/30"
                     : "bg-[#003767]/30"
                     } hover:bg-gradient-to-br active:bg-gradient-to-br from-[#ffd700]/30 to-[#003767]/30 p-[15px] rounded-full shadow-xl`}
-                href={`${bar.idLink}`}
+                href={navBar.idLink}
                 onClick={() => {
                     handleLinkClick(bar.idLink);
                 }}

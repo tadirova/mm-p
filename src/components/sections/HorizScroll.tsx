@@ -1,36 +1,35 @@
-import * as React from "react"
-import Image from "next/image"
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
-import {works} from "@/constants/constants";
+import * as React from "react";
+import Image from "next/image";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import {ScrollAreaHorizontalDemoProps} from "@/components/sections/typings";
 
-const artWorks = works.map((artwork) => (
-    <figure key={`${artwork.artist} + ${artwork.art}`} className="shrink-0">
-      <div className="overflow-hidden rounded-md">
-        <Image
-            src={artwork.art}
-            alt={`Photo by ${artwork.artist}`}
-            className="aspect-[3/4] h-fit w-fit object-cover"
-            width={300}
-            height={400}
-        />
-      </div>
-      <figcaption className="text-muted-foreground pt-2 text-xs">
-        Photo by{" "}
-        <span className="text-foreground font-semibold">
+const ScrollAreaHorizontalDemo = ({ items, className = "" }: ScrollAreaHorizontalDemoProps) => {
+    return (
+        <ScrollArea className={`w-full rounded-md ${className}`}>
+            <div className="flex w-max space-x-4 p-4">
+                {items.map((artwork) => (
+                    <figure key={`${artwork.artist}-${artwork.art}`} className="shrink-0">
+                        <div className="overflow-hidden rounded-md">
+                            <Image
+                                src={artwork.art}
+                                alt={`Photo ${artwork.artist}`}
+                                className="aspect-[3/4] h-fit w-fit object-cover"
+                                width={300}
+                                height={400}
+                            />
+                        </div>
+                        <figcaption className="text-muted-foreground pt-2 text-xs">
+                            Photo {" "}
+                            <span className="text-foreground font-semibold">
                 {artwork.artist}
               </span>
-      </figcaption>
-    </figure>
-));
+                        </figcaption>
+                    </figure>
+                ))}
+            </div>
+            <ScrollBar orientation="horizontal" />
+        </ScrollArea>
+    );
+};
 
-
-export default function ScrollAreaHorizontalDemo() {
-  return (
-    <ScrollArea className="w-full rounded-md">
-      <div className="flex w-max space-x-4 p-4">
-        {artWorks}
-      </div>
-      <ScrollBar orientation="horizontal" />
-    </ScrollArea>
-  )
-}
+export default ScrollAreaHorizontalDemo;

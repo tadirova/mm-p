@@ -14,11 +14,11 @@ const HeadingWrapper: FC<ContainerProps> = ({ children }) => {
       }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="flex mx-auto relative overflow-hidden uppercase tracking-[3px] sm:tracking-[7px] text-gray-400 text-sm:text-lg md:text-2xl px-6 pt-8 pb-6 rounded-full justify-center"
+      className="flex mx-auto relative overflow-hidden uppercase tracking-[3px] sm:tracking-[7px] text-[#ffd700] text-sm:text-lg md:text-2xl px-6 pt-8 pb-6 rounded-full justify-center"
     >
-      <span className="text-[#ffd700]">[</span>
+      <span className="text-[#334353]/90">[</span>
       {children}
-      <span className="text-[#ffd700]">]</span>
+      <span className="text-[#334353]/90">]</span>
     </motion.figcaption>
   );
 };

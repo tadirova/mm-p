@@ -1,6 +1,6 @@
 import { FC, useState, useEffect } from "react";
-import { bg } from "../../constants/constants";
 import { ContainerProps } from "./hocTypes";
+import {bg} from "@/constants/constants";
 
 const ContainerHeader: FC<ContainerProps> = ({ children }) => {
   const [scrolled, setScrolled] = useState(false);

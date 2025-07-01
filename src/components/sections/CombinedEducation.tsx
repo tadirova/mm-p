@@ -5,7 +5,7 @@ import {CombinedEducationProps} from "@/components/sections/typings";
 
 const CombinedEducation = ({educationData}: CombinedEducationProps) => {
     return (
-        <div className="flex flex-col gap-4 py-20">
+        <div className="flex flex-col gap-4 pb-40 overflow-hidden">
                 {educationData.map((item, index) => (
                     <motion.div
                         key={`card-${item.id}`}

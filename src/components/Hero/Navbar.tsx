@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { navItems } from "../../constants/constants";
 import { NavItem } from "../heroTypes";
+import {navItems} from "@/constants/constants";
 
 const Navbar = () => {
     const [activeLink, setActiveLink] = useState("");
@@ -22,12 +22,12 @@ const Navbar = () => {
         >
             <Link
                 className={cn(
-                    "cursor-pointer text-lg text-white rounded-full hover:shadow-lg hover:shadow-[#ffd700]/50 text-center p-[5em]",
-                    activeLink === navBar.navBarTitle && "font-bold shadow-lg shadow-[#ffd700]/50 bg-gradient-to-br from-blue-800/60 to-[#ffd700]/30",
-                    scrolled && "text-blue-700",
-                    "px-[1em] py-[0.5em] hover:bg-gradient-to-br hover:from-blue-800/20 hover:to-[#ffd700]/20"
+                    "cursor-pointer text-lg text-[#151525] font-semibold rounded-full hover:shadow-lg hover:shadow-[#81c154]/50 text-center p-[5em]",
+                    activeLink === navBar.navBarTitle && "shadow-lg shadow-[#81c154]/50 bg-gradient-to-br from-blue-800/60 to-[#81c154]/30",
+                    scrolled && "text-[#81c154]",
+                    "px-[1em] py-[0.5em] hover:bg-gradient-to-br hover:from-blue-800/20 hover:to-[#81c154]/20"
                 )}
-                href={`${navBar.idLink}`}
+                href={navBar.idLink}
                 onClick={() => handleLinkClick(navBar.navBarTitle)}
             >
                 {navBar.navBarTitle.toUpperCase()}
