@@ -8,7 +8,7 @@ const Art = () => {
         <SectionWrapperContainer>
             <figure className="max-h-[2100px] md:text-left max-w-full mx-auto min-h-[30rem] overflow-y inner-wrapper-container space-y-16">
                 <HeadingWrapper>Art</HeadingWrapper>
-                <div className="flex flex-col xl:flex-row relative mx-auto items-stretch md:space-y-0 md:space-x-20 w-full max-w-full overflow-hidden">
+                <div className="flex flex-col xl:flex-row relative mx-auto items-stretch md:space-y-0 space-x-8 w-full max-w-full overflow-hidden">
                     <motion.span
                         initial={{
                             x: -200,
