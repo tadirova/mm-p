@@ -10,8 +10,6 @@ import { useState } from "react";
 import { NavItem } from "../heroTypes";
 import {navItems} from "@/constants/constants";
 
-
-
 const SheetMenu = () => {
     const [activeLink, setActiveLink] = useState("");
 
@@ -32,7 +30,7 @@ const SheetMenu = () => {
                     ? "bg-gradient-to-br from-[#ffd700]/30 to-[#003767]/30"
                     : "bg-[#003767]/30"
                     } hover:bg-gradient-to-br active:bg-gradient-to-br from-[#ffd700]/30 to-[#003767]/30 p-[15px] rounded-full shadow-xl`}
-                href={navBar.idLink}
+                href={bar.idLink}
                 onClick={() => {
                     handleLinkClick(bar.idLink);
                 }}
