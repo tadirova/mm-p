@@ -7,13 +7,13 @@ import Contact from "./Contact";
 const DUMMY_SOCIALS = [
     {
         title: "Instagram",
-        url: "https://www.instagram.com/we.talk.data.ai/?hl=en",
+        url: "https://www.instagram.com/tadirova/",
     },
     {
         title: "LinkedIn",
-        url: "https://www.linkedin.com/company/wetalkdata-ai/?viewAsMember=true",
+        url: "https://www.linkedin.com/in/mihaela-tadirova-754787298/?viewAsMember=true",
     },
-    { title: "Facebook", url: "https://www.facebook.com/wetalkdataai" },
+    { title: "Facebook", url: "https://www.facebook.com/mihaela.tadirova/" },
 ];
 
 const socialsList1 = DUMMY_SOCIALS?.map((social, i) => {

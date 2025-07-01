@@ -1,20 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 // import sucessGif from "../../public/assets/success.gif";
 import { motion } from "framer-motion";
 import useInput from "@/hooks/use-input";
 
-const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
 const ContactForm = () => {
   const [formIsValid, setFormIsValid] = useState(false);
   const [registerIsCompleted, setRegisterIsCompleted] = useState(false);
-  const [dataIsSucess, setDataIsSucess] = useState(false);
+  const [dataIsSuccess, setDataIsSuccess] = useState(false);
 
   const nameRef = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
   const commentRef = useRef<HTMLTextAreaElement | null>(null);
-  const agreeRef = useRef<HTMLInputElement | null>(null);
 
   const {
     value: enteredName,
@@ -47,14 +46,12 @@ const ContactForm = () => {
     const name = nameRef.current?.value;
     const email = emailRef.current?.value;
     const comment = commentRef.current?.value;
-    const agree = agreeRef.current?.checked;
 
     try {
       const data = {
         name,
         email,
         comment,
-        agree,
       };
 
       const res = await fetch('', {
@@ -65,8 +62,12 @@ const ContactForm = () => {
         body: JSON.stringify(data),
       });
 
-      if (!res.ok) throw new Error("Failed to submit data!");
-      else setDataIsSucess(true);
+      if (!res.ok) {
+        console.error("Failed to submit data!");
+        return;
+      }
+
+      else setDataIsSuccess(true);
     } catch (err) {
       console.error("Error submitting data", err);
     }
@@ -89,7 +90,7 @@ const ContactForm = () => {
       onSubmit={confirmRegistrationHandler}
       className="inner-wrapper-container space-y-8 text-white bg-black/20 rounded-xl max-w-7xl mb-10"
     >
-      {/* {dataIsSucess && (
+      {/* {dataIsSuccess && (
         <>
           <Image
             src={sucessGif}
@@ -101,11 +102,11 @@ const ContactForm = () => {
           />
 
           <p className="text-[#ffd700] font-bold text-[1.05rem] sm:text-xl">
-            You are sucessfully registered for the event!
+            You are sucessfully registered!
           </p>
         </>
       )} */}
-      {!dataIsSucess && (
+      {!dataIsSuccess && (
         <>
           <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-12 md:space-x-16 lg:space-x-36 space-y-4 sm:space-y-0 w-full justify-between">
             <label htmlFor="Name" className="w-full">
@@ -155,24 +156,24 @@ const ContactForm = () => {
               name="data[comment]"
               rows={5}
               cols={100}
-              placeholder="Please state your expectations and share some tips for the for the upcoming event"
+              placeholder="Interested in collaborating on a project or sharing opportunities? Let’s connect!"
               className="rounded-xl input-group text-[#ffd700]"
               ref={commentRef}
             />
           </label>
-          <label htmlFor="agree" className="space-y-2 flex flex-row">
-            <input
-              id="agree"
-              name="data[agree]"
-              type="checkbox"
-              placeholder="asd"
-              className="input-group text-[#ffd700] w-4 h-4 p-4 mt-1 mr-2"
-              ref={agreeRef}
-            />{" "}
-            <span>
-              Do you agree to contact you about any open positions
-            </span>
-          </label>
+          {/*<label htmlFor="agree" className="space-y-2 flex flex-row">*/}
+          {/*  <input*/}
+          {/*    id="agree"*/}
+          {/*    name="data[agree]"*/}
+          {/*    type="checkbox"*/}
+          {/*    placeholder="asd"*/}
+          {/*    className="input-group text-[#ffd700] w-4 h-4 p-4 mt-1 mr-2"*/}
+          {/*    ref={agreeRef}*/}
+          {/*  />{" "}*/}
+          {/*  <span>*/}
+          {/*    Do you agree to contact you about any open positions*/}
+          {/*  </span>*/}
+          {/*</label>*/}
           {registerIsCompleted && <span className="loader"></span>}
           {registerIsCompleted || (
             <motion.button
@@ -187,7 +188,7 @@ const ContactForm = () => {
                   : "cursor-not-allowed border-2 hover:border-red-700"
               }`}
             >
-              Register
+              Contact me
             </motion.button>
           )}
         </>

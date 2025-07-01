@@ -20,10 +20,11 @@ const Career = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         className="md:w-1/2 text-left paragraph-1 flex-grow min-h-full"
                     >
-                        Where does it come from?
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        Despite how unpredictable the future might be, I’m certain that I want to make an impact by connecting people or communities through technology even if it means brightening just one person’s path.
+                        My journey into software engineering was sparked by my early love for music. What began as a simple appreciation for melody eventually turned into a fascination with the patterns that govern both music and computation.
+                        My passion grew as I began programming in C++ and exploring algorithmic thinking through pattern recognition. Coming from a developing country, I’ve become especially interested in emerging fields like Quantum Computing.
+                        This inspired me to focus my thesis on it, not only outlining its major challenges but also conducting research on Quantum Computer Music using tools like Max for Live, Qutune, Qiskit, and Python.
+                        I believe that by bridging computing and music, we can open unexpected doors to solving complex problems artistically, socially, and technologically.
                     </motion.p>
                     <motion.span
                         initial={{

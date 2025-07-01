@@ -1,4 +1,4 @@
-import Link from "next/link";
+//import Link from "next/link";
 import {motion} from "framer-motion";
 import Image from "next/image";
 import { GitHubLogoIcon, FileTextIcon } from "@radix-ui/react-icons";
@@ -46,7 +46,7 @@ const Hero = () => {
           GitHub
         </a>
         <a
-          href="/cv.pdf"
+          href="/#"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-white/80 hover:bg-white text-black font-semibold px-4 py-2 rounded-full shadow-lg flex items-center gap-2 transition"

@@ -11,6 +11,11 @@
     hsla(216, 100%, 10%, 0.95) 56%,
     hsla(208, 100%, 20%, 1) 92%
   );
+
+  :root {
+    --font-geist-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
   --foreground: oklch(0.145 0 0);
   --radius: 0.625rem;
   --card: oklch(1 0 0);

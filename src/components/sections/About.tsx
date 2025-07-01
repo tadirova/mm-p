@@ -1,4 +1,4 @@
-import Image from "next/image";
+//import Image from "next/image";
 import { motion } from "motion/react";
 import SectionWrapperContainer from "../HOC/SectionWrapperContainer";
 import HeadingWrapper from "../HOC/HeadingWrapper";

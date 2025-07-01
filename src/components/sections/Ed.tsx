@@ -1,5 +1,6 @@
 import * as motion from "motion/react-client"
 import type { Variants } from "motion/react"
+import {CSSProperties} from "react";
 
 export default function ScrollTriggered() {
     return (
@@ -54,14 +55,14 @@ const cardVariants: Variants = {
 
 const hue = (h: number) => `hsl(${h}, 100%, 50%)`
 
-const container: React.CSSProperties = {
+const container: CSSProperties = {
     margin: "100px auto",
     maxWidth: 500,
     paddingBottom: 100,
     width: "100%",
 }
 
-const cardContainer: React.CSSProperties = {
+const cardContainer: CSSProperties = {
     overflow: "hidden",
     display: "flex",
     justifyContent: "center",
@@ -71,7 +72,7 @@ const cardContainer: React.CSSProperties = {
     marginBottom: -120,
 }
 
-const splash: React.CSSProperties = {
+const splash: CSSProperties = {
     position: "absolute",
     top: 0,
     left: 0,
@@ -80,7 +81,7 @@ const splash: React.CSSProperties = {
     clipPath: `path("M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z")`,
 }
 
-const card: React.CSSProperties = {
+const card: CSSProperties = {
     fontSize: 164,
     width: 300,
     height: 430,

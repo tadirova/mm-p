@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import SectionWrapperContainer from "../HOC/SectionWrapperContainer";
 import HeadingWrapper from "../HOC/HeadingWrapper";
 import ScrollAreaHorizontalDemo from "./HorizScroll";
@@ -9,7 +8,7 @@ const Art = () => {
         <SectionWrapperContainer>
             <figure className="max-h-[2100px] md:text-left max-w-full mx-auto min-h-[30rem] overflow-y inner-wrapper-container space-y-16">
                 <HeadingWrapper>Art</HeadingWrapper>
-                <div className="flex flex-col md:flex-row relative items-stretch inner-section-wrapper-fixer md:space-y-0 md:space-x-8">
+                <div className="flex flex-col xl:flex-row relative mx-auto items-stretch md:space-y-0 md:space-x-20 w-full max-w-full overflow-hidden">
                     <motion.span
                         initial={{
                             x: -200,
@@ -19,7 +18,7 @@ const Art = () => {
                             duration: 1.2,
                         }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        className="flex md:w-1/2"
+                        className="w-full max-w-full overflow-hidden"
                     >
                         <ScrollAreaHorizontalDemo />
                     </motion.span>
@@ -32,12 +31,13 @@ const Art = () => {
                             duration: 1.2,
                         }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        className="md:w-1/2 text-left paragraph-1 flex-grow min-h-full"
+                        className="flex w-full xl:w-1/2 text-left paragraph-1 flex-grow min-h-full"
                     >
-                        Where does it come from?
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        The first time I saw a grand piano, I knew music would shape my life. Piano lessons and music theory soon opened up a new way of hearing the world, even a knock on the door carried new meaning.
+                        By the age of nine, I was composing, and performing on stage helped me overcome a deep fear of being seen. My passion grew into exploring how sound can be made more tangible, especially through projects with people with disabilities, including an Erasmus+ experience in Portugal. In recent years, my journey led me to DJing - a space where music becomes collective, physical, and raw.
+                        Performing across multiple cities, I’ve embraced new sounds, technologies, and the thrill of connecting people through rhythm.
+
                     </motion.span>
                 </div>
                 <div className="flex flex-col md:flex-row relative items-stretch inner-section-wrapper-fixer md:space-y-0 md:space-x-8">
@@ -52,10 +52,8 @@ const Art = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         className="md:w-1/2 text-left paragraph-1 flex-grow min-h-full"
                     >
-                        Where does it come from?
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        I am constantly amazed by the beauty and complexity of the world around me, and creating art allows me to capture that beauty and share it with others. For me, there is nothing more rewarding than creating something that brings joy and inspiration to me and everyone around me.
+                        The process of creating something from nothing, using only my imagination and the tools at hand is deeply satisfying and peaceful.
                     </motion.p>
                     <motion.span
                         initial={{
@@ -96,10 +94,10 @@ const Art = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         className="md:w-1/2 text-left paragraph-1 flex-grow min-h-full"
                     >
-                        Where does it come from?
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        I’ve been dancing for about 14 years, and I’m still a proud member of the same dance team, “Gazeli,” that I joined at the beginning of my journey. Through dance, I discovered how to hold myself on stage and build genuine confidence.
+                        This art form has brought me lifelong friendships and unforgettable experiences. With my team, I’ve had the chance to travel and compete in places like Italy, Turkey, and Serbia, as well as in numerous competitions at home.
+                        These travels expanded my horizons—introducing me to diverse cultures, traditions, and landmarks. Dance has given me a profound sense of freedom and proven that when you pursue what you love, the rewards are limitless.
 
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
                     </motion.p>
                 </div>
             </figure>
