@@ -17,6 +17,7 @@ const About = () => {
                             duration: 1.2,
                         }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
                         className="flex w-full text-left paragraph-1 flex-grow min-h-full"
                     >
                         {aboutText}

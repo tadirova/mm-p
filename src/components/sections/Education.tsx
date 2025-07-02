@@ -14,6 +14,7 @@ const Education = () => {
                     initial={{ x: 200, opacity: 0 }}
                     transition={{ duration: 1.2 }}
                     whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
                     className="md:w-full text-left paragraph-1 flex-grow min-h-full"
                 >
                     {eduText}

@@ -12,7 +12,7 @@ const Hero = () => {
                  h-screen items-center justify-center text-center sm:space-y-5 space-y-2 px-3 sm:px-0"
         style={{
           backgroundPosition: "50%",
-          backgroundImage: `url('/hero-portfolio.jpg')`,
+          backgroundImage: `url('/hero-portfolio.webp')`,
         }}
       >
         <motion.div

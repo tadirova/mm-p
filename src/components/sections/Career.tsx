@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import SectionWrapperContainer from "../HOC/SectionWrapperContainer";
 import HeadingWrapper from "../HOC/HeadingWrapper";
 import {careerText} from "@/constants/constants";
+import * as React from "react";
 
 const Career = () => {
     return (
@@ -19,6 +20,7 @@ const Career = () => {
                             duration: 1.2,
                         }}
                         whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
                         className="md:w-1/2 text-left paragraph-1 flex-grow min-h-full"
                     >{careerText}</motion.p>
                     <motion.span
@@ -30,10 +32,11 @@ const Career = () => {
                             duration: 1.2,
                         }}
                         whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
                         className="flex md:w-1/2"
                     >
                         <Image
-                            className="rounded-xl object-cover md:rounded-xl"
+                            className="rounded-xl aspect-[4/3] h-fit w-fit object-cover md:rounded-xl"
                             src={"/down_artfull.webp"}
                             alt={"Hero Portfolio"}
                             width={700}

@@ -1,4 +1,4 @@
-import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import {DiscordLogoIcon, InstagramLogoIcon, LinkedInLogoIcon} from "@radix-ui/react-icons";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import SectionWrapperContainer from "../HOC/SectionWrapperContainer";
@@ -13,7 +13,10 @@ const DUMMY_SOCIALS = [
         title: "LinkedIn",
         url: "https://www.linkedin.com/in/mihaela-tadirova-754787298/?viewAsMember=true",
     },
-    { title: "Facebook", url: "https://www.facebook.com/mihaela.tadirova/" },
+    {
+        title: "Discord",
+        url: "https://discordapp.com/users/miha#6303",
+    },
 ];
 
 const socialsList1 = DUMMY_SOCIALS?.map((social, i) => {
@@ -31,11 +34,14 @@ const socialsList1 = DUMMY_SOCIALS?.map((social, i) => {
             >
                 {social.title.toLowerCase() === "instagram" ? (
                     <InstagramLogoIcon className="text-[#ffd700]/30 hover:text-[#ffd700]/60 animate scale-150" />
-                ) : (
+                ) : social.title.toLowerCase() === "linkedin" ?  (
                     <LinkedInLogoIcon
                         className={`text-[#ffd700]/30 ml-6 mr-2 hover:text-[#ffd700]/60 animate scale-150`}
                     />
-                )}
+                ):
+                    (<DiscordLogoIcon
+                        className={`text-[#ffd700]/30 ml-6 mr-2 hover:text-[#ffd700]/60 animate scale-150`}
+                    />)}
             </Link>
         </motion.div>
     );

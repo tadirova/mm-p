@@ -90,22 +90,6 @@ const ContactForm = () => {
       onSubmit={confirmRegistrationHandler}
       className="inner-wrapper-container space-y-8 text-white bg-black/20 rounded-xl max-w-7xl mb-10"
     >
-      {/* {dataIsSuccess && (
-        <>
-          <Image
-            src={sucessGif}
-            className="flex rounded-xl object-cover md:rounded-xl"
-            alt="success"
-            height={400}
-            width={400}
-            priority
-          />
-
-          <p className="text-[#ffd700] font-bold text-[1.05rem] sm:text-xl">
-            You are sucessfully registered!
-          </p>
-        </>
-      )} */}
       {!dataIsSuccess && (
         <>
           <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-12 md:space-x-16 lg:space-x-36 space-y-4 sm:space-y-0 w-full justify-between">
@@ -161,19 +145,6 @@ const ContactForm = () => {
               ref={commentRef}
             />
           </label>
-          {/*<label htmlFor="agree" className="space-y-2 flex flex-row">*/}
-          {/*  <input*/}
-          {/*    id="agree"*/}
-          {/*    name="data[agree]"*/}
-          {/*    type="checkbox"*/}
-          {/*    placeholder="asd"*/}
-          {/*    className="input-group text-[#ffd700] w-4 h-4 p-4 mt-1 mr-2"*/}
-          {/*    ref={agreeRef}*/}
-          {/*  />{" "}*/}
-          {/*  <span>*/}
-          {/*    Do you agree to contact you about any open positions*/}
-          {/*  </span>*/}
-          {/*</label>*/}
           {registerIsCompleted && <span className="loader"></span>}
           {registerIsCompleted || (
             <motion.button

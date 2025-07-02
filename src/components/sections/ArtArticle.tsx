@@ -9,6 +9,7 @@ const ArtArticle = ({ art, className = "" }: ArtArticleProps) => {
                 initial={{ x: -200, opacity: 0 }}
                 transition={{ duration: 1.2 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
                 className="w-full max-w-full overflow-hidden min-h-[32rem]"
             >
                 <ScrollAreaHorizontalDemo items={art.artworks} />
@@ -18,6 +19,7 @@ const ArtArticle = ({ art, className = "" }: ArtArticleProps) => {
                 initial={{ x: 200, opacity: 0 }}
                 transition={{ duration: 1.2 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
                 className="flex w-full xl:w-1/2 text-left paragraph-1 flex-grow"
             >
                 {art.content}
