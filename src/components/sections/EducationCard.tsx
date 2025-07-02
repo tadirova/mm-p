@@ -4,7 +4,7 @@ import { CardProps } from "@/components/sections/typings";
 
 const cardVariants: Variants = {
     offscreen: {
-        y: 300,
+        y: 200,
     },
     onscreen: {
         y: 50,

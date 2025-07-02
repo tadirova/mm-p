@@ -9,7 +9,7 @@ const CombinedEducation = ({educationData}: CombinedEducationProps) => {
                 {educationData.map((item, index) => (
                     <motion.div
                         key={`card-${item.id}`}
-                        initial={{x: -500, opacity: 0}}
+                        initial={{x: -100, opacity: 0}}
                         whileInView={{x: 0, opacity: 1}}
                         transition={{duration: 1.2}}
                         viewport={{ once: true }}

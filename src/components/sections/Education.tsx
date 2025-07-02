@@ -11,7 +11,7 @@ const Education = () => {
                 <HeadingWrapper>Education</HeadingWrapper>
 
                 <motion.p
-                    initial={{ x: 200, opacity: 0 }}
+                    initial={{ x: 100, opacity: 0 }}
                     transition={{ duration: 1.2 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
